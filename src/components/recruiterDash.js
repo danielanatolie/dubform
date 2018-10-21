@@ -102,6 +102,7 @@ class RecruiterDash extends Component {
         >
             Add Role
         </Button>
+        {" "}
         <Button
           bsStyle="info"
           onClick={this.showEventModal}
