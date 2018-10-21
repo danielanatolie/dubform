@@ -168,15 +168,22 @@ class UserDash extends Component {
                 <div className="progSection" />
               </div>
             ) : (
-              <div className="progress">
-                <div className="progCompleteSmall progSection" />
-                <div className="progComplete progSection" />
-                <div className="progCompleteSmall progSection" />
-                <div className="progComplete progSection" />
-                <div className="progSection progComplete">
-                  <div className="progButton progButtonCenter">
-                    Pending Offer
-                  </div>
+                <div className="progress">
+                    <div className="progCompleteSmall progSection">
+                    </div>
+                    <div className="progComplete progSection">
+                    </div>
+                    <div className="progCompleteSmall progSection">
+                    </div>
+                    <div className="progComplete progSection">
+                    </div>
+                    <div className="progSection progComplete">
+                        <div className="progButton progButtonCenter">
+                            Pending Decision
+                        </div>
+                    </div>
+                    <div className="progSection">
+                    </div>
                 </div>
                 <div className="progSection" />
               </div>
@@ -243,9 +250,9 @@ class UserDash extends Component {
             </Modal>
             <div className="progress">
               <div className="progCancelled progSection">
-                <div className="progDull progButton">
-                  Failed Coding Challenge :(
-                </div>
+                <div className="progDull progButton">Failed Coding Challenge :(</div>
+              </div>
+              <div className="progSection">
               </div>
               <div className="progSection" />
               <div className="progSection" />

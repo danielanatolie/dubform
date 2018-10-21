@@ -1,10 +1,16 @@
-#endCall {
+#endCall, #endCall:hover {
     font-size: 2em;
     margin: auto;
     margin-top: 1em;
     text-align: center;
+    background-color: rgb(220, 53, 69);
+    width: 6em;
+    color: white;
+    border-radius: 1em;
+    text-decoration: none;
 }
 
 #wazzupBrah {
     text-align: center;
 }
+
