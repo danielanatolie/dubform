@@ -98,6 +98,18 @@
   text-decoration: none;
 }
 
+.progButton > a, .progButton > a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.progCancelled {
+    background-color: red;
+}
+
+.progDull {
+    background-color: darkGray;
+}
 .modal-container {
   position: relative;
 }
