@@ -67,15 +67,26 @@
 }
 
 .progComplete {
-  background: repeating-linear-gradient(
-    45deg,
-    #606dbc,
-    #606dbc 10px,
-    #465298 10px,
-    #465298 20px
-  );
+    background: repeating-linear-gradient(
+        45deg,
+        #606dbc,
+        #606dbc 10px,
+        #465298 10px,
+        #465298 20px
+      );
   border-right: 0.05em solid beige;
 }
+
+.progCompleteSmall {
+    background: repeating-linear-gradient(
+        45deg,
+        #606dbc,
+        #606dbc 10px,
+        #465298 10px,
+        #465298 20px
+      );
+}
+
 
 .progButton {
   z-index: 100;
@@ -86,6 +97,10 @@
   color: white;
   padding: 0.5em;
   border-radius: 0.5em;
+}
+
+.progButtonCenter {
+    margin-left: 8em;
 }
 
 .progButton:hover {
