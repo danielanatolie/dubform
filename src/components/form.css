@@ -1,5 +1,115 @@
+#grow {
+    -moz-transition: height .5s;
+    -ms-transition: height .5s;
+    -o-transition: height .5s;
+    -webkit-transition: height .5s;
+    transition: height .5s;
+    height: 0;
+    overflow: hidden;
+  }
 
-.textarea{
-  min-height: 1000px;
-  height: 1000px;
+.hidden {
+  display: none;
+}
+
+.dashContainer {
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin: auto;
+    width: 90%;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.dashHeader {
+    background-color: #777;
+    margin: auto;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    margin-top: 2.6em;
+    padding: 0.6em;
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    width: 90%;
+}
+
+.company {
+    background-color: #fff;
+    padding: 1em;
+    margin: auto;
+    width: 80%;
+    border-radius: 0.5em;
+    font-size: 3em;
+}
+
+.home-link {
+    left: 2em;
+}
+
+.user-name {
+    right: 2em;
+}
+
+.home-link, .user-name {
+    font-size: 1.5em;
+    top: 1em;
+
+    position: absolute;
+}
+
+.spacer {
+    height: 1em;
+}
+
+.progress {
+    margin-top: 0.5em;
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.progSection {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.progComplete {
+    background: repeating-linear-gradient(
+    45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+    );
+    border-right: 0.05em solid beige;
+}
+
+.progButton {
+    z-index: 100;
+    position: absolute;
+    font-size: 0.5em;
+    margin-top: 1.5em;
+    background-color: rgb(92, 184, 92);
+    color: white;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+.progButton:hover {
+    cursor: pointer;
+}
+
+.progButton > a, .progButton > a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+h1:hover{
+  cursor:pointer;
 }
