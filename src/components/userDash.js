@@ -5,7 +5,7 @@ import "./userDash.css";
 import "./companyEvent.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-import { Modal, Button, Image } from "react-bootstrap";
+import { Modal, Button, Image, Navbar, Nav,NavItem, MenuItem, NavDropdown } from "react-bootstrap";
 import Calendar from 'rc-calendar';
 
 var hello = 1;
@@ -40,10 +40,29 @@ class UserDash extends Component {
       "Recruiting Event: \n 8:30PM Date: Sun. Oct. 21, 2018. Where: University of Washington, info.science building Registration Details: {URL_LINK} Interested? [YES][NO]";
     return (
       <div>
-        <Link to={routes.FORM}>
-          <div className="home-link">Dubform</div>
-        </Link>
-        <div className="user-name">John Doe</div>
+      <Navbar>
+      <Navbar.Header>
+        <Navbar.Brand>
+          <a href="#brand">dubForm</a>
+        </Navbar.Brand>
+        <Navbar.Toggle />
+      </Navbar.Header>
+      <Navbar.Collapse>
+        <Nav onSelect={k => this.handleNavSelect(k)}>
+          <NavItem eventKey={1} href="#">
+            Events
+          </NavItem>
+        </Nav>
+        <Nav pullRight>
+          <NavItem eventKey={1} href="#">
+            Facebook
+          </NavItem>
+          <NavItem eventKey={2} href="#">
+              <Link to={routes.USER_DASH} style={{ color: '#A9A9A9' }}>Sign out</Link>
+          </NavItem>
+        </Nav>
+      </Navbar.Collapse>
+      </Navbar>
         <div className="dashHeader">My Companies:</div>
         <div className="dashContainer">
           <div className="company">
