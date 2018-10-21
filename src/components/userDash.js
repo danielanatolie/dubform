@@ -33,7 +33,12 @@ class UserDash extends Component {
     handleHideTwo() {
         this.setState({ showTwo: false });
         var that = this;
-        setTimeout(function(){ that.setState({completeBars: 100}); }, 3000);
+        setTimeout(function(){ that.setState({completeBars: 3}); }, 5000);
+    }
+
+    finalUpdate() {
+        this.setState({completeBars: 100});
+        hello = 100;
     }
 
   render() {
@@ -139,19 +144,35 @@ class UserDash extends Component {
                     <div className="progSection">
                     </div>
                 </div>
+            ) : this.state.completeBars === 3 ? (
+                <div className="progress">
+                    <div className="progComplete progSection">
+                    </div>
+                    <div className="progComplete progSection">
+                        
+                        <div className="progButton">
+                            <Link to={routes.PHONE} onClick={() => this.finalUpdate()}>
+                            Do Phone Interview
+                            </Link>
+                        </div>
+                       
+                    </div>
+                    <div className="progSection">
+                    </div>
+                </div>
             ) : (
                 <div className="progress">
                     <div className="progComplete progSection">
                     </div>
                     <div className="progComplete progSection">
+                    </div>
+                    <div className="progSection progComplete">
                         <div className="progButton">
-                            Do Phone Interview
+                            Pending Offer
                         </div>
                     </div>
-                    <div className="progSection">
-                    </div>
                 </div>
-                )}
+            )}
           </div>
           <div className="spacer" />
           <div className="company">

@@ -87,6 +87,16 @@
   border-right: 0.05em solid beige;
 }
 
+.progCompleteSmall {
+    background: repeating-linear-gradient(
+    45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+  );
+}
+
 .progButton {
   z-index: 100;
   position: absolute;
@@ -100,6 +110,10 @@
 
 .progButton:hover {
   cursor: pointer;
+}
+
+.progButtonCenter {
+    margin-left: 8em;
 }
 
 .progButton > a,
