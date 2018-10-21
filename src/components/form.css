@@ -1,5 +1,5 @@
-.container {
-  display: flex; /* or inline-flex */
-  justify-content: center;
-  
+
+.textarea{
+  min-height: 1000px;
+  height: 1000px;
 }
