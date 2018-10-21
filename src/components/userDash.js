@@ -108,11 +108,49 @@ class UserDash extends Component {
                             </div>
                         </div>
                     </div>
+                //hi
                 </div>
+                <div className="progSection" />
+              </div>
+            )}
+          </div>
+          <div className="spacer" />
+          <div className="company">
+            Google{" "}
+            <FontAwesomeIcon
+              icon={faInfoCircle}
+              size="xs"
+              onClick={() => this.setState({ show: true })}
+            />
+            <Modal
+              show={this.state.show}
+              onHide={this.handleHide}
+              container={this}
+              aria-labelledby="contained-modal-title"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title">
+                  Upcoming Company Events
+                </Modal.Title>
+              </Modal.Header>
+              <Image src="http://15f.dubhacks.co/images/fb_link.png" rounded />
+              <Modal.Body>{companyEvent}</Modal.Body>
+              <Modal.Footer>
+                <Button onClick={this.handleHide}>Close</Button>
+              </Modal.Footer>
+            </Modal>
+            <div className="progress">
+              <div className="progComplete progSection" />
+              <div className="progComplete progSection">
+                <div className="progButton">Schedule Phone Interview</div>
+              </div>
+              <div className="progSection" />
             </div>
-        );
-      
-    }
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default withRouter(UserDash);

@@ -48,9 +48,7 @@ class Coding extends React.Component {
                 />
               </FormGroup>
               <Link to={routes.USER_DASH}>
-                <Button bsStyle="success">
-                  Submit
-                </Button>
+                <Button bsStyle="success">Submit</Button>
               </Link>
             </form>
           </Col>
