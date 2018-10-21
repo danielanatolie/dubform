@@ -10,6 +10,8 @@
   padding-top: 2em;
   padding-bottom: 2em;
   border-style: solid;
+  border-color: #b4b4b4;
+  border-width: 1px;
 }
 
 .dashHeader {
@@ -24,6 +26,9 @@
   font-size: 2em;
   font-weight: 700;
   width: 90%;
+  border-color: #b4b4b4;
+  border-width: 1px;
+
 }
 
 .company {
@@ -34,6 +39,8 @@
   border-radius: 0.5em;
   font-size: 1.4em;
   border-style: solid;
+  border-width: 1px;
+
 }
 
 .home-link {
