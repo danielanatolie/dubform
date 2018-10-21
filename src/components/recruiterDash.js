@@ -10,7 +10,6 @@ class RecruiterDash extends Component {
           <Table striped bordered condensed hover>
           <thead>
             <tr>
-              <th>#</th>
               <th>Candidate</th>
               <th>Score</th>
               <th>Progress</th>
@@ -18,26 +17,41 @@ class RecruiterDash extends Component {
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
               <td>John</td>
               <td>70</td>
               <td>PHONE</td>
             </tr>
             <tr>
-              <td>2</td>
               <td>Sara</td>
               <td>70</td>
               <td>PHONE</td>
             </tr>
             <tr>
-              <td>3</td>
               <td>Max</td>
               <td>40</td>
               <td>Challenge</td>
             </tr>
           </tbody>
+          </Table>
+          <h3><Label>UX</Label></h3>
+          <Table striped bordered condensed hover>
+          <thead>
+            <tr>
+              <th>Candidate</th>
+              <th>Score</th>
+              <th>Progress</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Smith</td>
+              <td>101</td>
+              <td>YES | NO</td>
+            </tr>
+          </tbody>
         </Table>
       </div>
+
     );
   }
 }
