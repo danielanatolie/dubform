@@ -97,13 +97,14 @@ class UserDash extends Component {
                         Amazon
                         <div className="progress">
                             <div className="progCancelled progSection">
-                            </div>
-                            <div className="progCancelled progSection">
                                 <div className="progDull progButton">
-                                    Declined Offer :(
+                                   Failed Coding Challenge :(
                                 </div>
                             </div>
-                            <div className="progCancelled progSection">
+                            <div className=" progSection">
+                                
+                            </div>
+                            <div className="progSection">
                             </div>
                         </div>
                     </div>
