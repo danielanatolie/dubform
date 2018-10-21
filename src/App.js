@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import { BrowserRouter as Router, Route } from "../react-router-dom";
 import "./App.css";
 import Coding from "./coding";
@@ -11,6 +11,7 @@ import * as routes from "../constants/routes";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import logo from "./logo.png";
 
 library.add(spinner);
 

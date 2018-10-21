@@ -5,8 +5,8 @@
   height: 80%;
   margin: auto;
   width: 90%;
-  border-bottom-right-radius: .5em;
-  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
   padding-top: 2em;
   padding-bottom: 2em;
   /* border-style: solid;
@@ -17,8 +17,8 @@
 .dashHeader {
   background-color: #fff;
   margin: auto;
-  border-top-right-radius: .5em;
-  border-top-left-radius: .5em;
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
   margin-top: 0em;
   padding: 0em;
   color: black;
@@ -29,7 +29,6 @@
   /* border-style: solid;
   border-color: #b4b4b4;
   border-width: 1px; */
-
 }
 
 .company {
@@ -41,7 +40,6 @@
   font-size: 1.4em;
   /* border-style: solid;
   border-width: 1px; */
-
 }
 
 .home-link {
@@ -89,7 +87,7 @@
 }
 
 .progCompleteSmall {
-    background: repeating-linear-gradient(
+  background: repeating-linear-gradient(
     45deg,
     #606dbc,
     #606dbc 10px,
@@ -116,7 +114,7 @@
 }
 
 .progButtonCenter {
-    margin-left: 4em;
+  margin-left: 4em;
 }
 
 .progButton > a,
@@ -125,17 +123,18 @@
   text-decoration: none;
 }
 
-.progButton > a, .progButton > a:hover {
-    color: black;
-    text-decoration: none;
+.progButton > a,
+.progButton > a:hover {
+  color: black;
+  text-decoration: none;
 }
 
 .progCancelled {
-    background-color: red;
+  background-color: red;
 }
 
 .progDull {
-    background-color: darkGray;
+  background-color: darkGray;
 }
 .modal-container {
   position: relative;
@@ -149,6 +148,11 @@
   white-space: pre-line;
 }
 
-.dubForm{
+.dubForm {
   color: black;
+}
+
+.app-logo {
+  height: 50px;
+  swidth: auto;
 }
