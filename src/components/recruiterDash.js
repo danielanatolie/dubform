@@ -7,10 +7,13 @@ class RecruiterDash extends Component {
     this.state = {
       role: '',
       skills: null,
-      showAddRoleModal: false
+      showAddRoleModal: false,
+      showEventModal: false
     }
     this.showAddRoleModal = this.showAddRoleModal.bind(this);
     this.closeAddRoleModal = this.closeAddRoleModal.bind(this);
+    this.showEventModal = this.showEventModal.bind(this);
+    this.closeEventModal = this.closeEventModal.bind(this)
     this.updateRoleTitle = this.updateRoleTitle.bind(this);
     this.updateKeySkills = this.updateKeySkills.bind(this);
   }
@@ -20,11 +23,16 @@ class RecruiterDash extends Component {
   }
 
   showAddRoleModal() {
-    console.log('Show add role!');
     this.setState({ showAddRoleModal: true });
   }
 
+  closeEventModal() {
+    this.setState({ showEventModal: false });
+  }
 
+  showEventModal() {
+    this.setState({ showEventModal: true });
+  }
 
   updateRoleTitle(e) {
     this.setState({ role: e.target.value })
@@ -94,6 +102,12 @@ class RecruiterDash extends Component {
         >
             Add Role
         </Button>
+        <Button
+          bsStyle="info"
+          onClick={this.showEventModal}
+        >
+            Add Event
+        </Button>
 
         <Modal show={this.state.showAddRoleModal} onHide={this.closeAddRoleModal}>
           <Modal.Header closeButton>
@@ -126,6 +140,59 @@ class RecruiterDash extends Component {
           <Modal.Footer>
             <Button bsStyle="success" onClick={this.closeAddRoleModal}>Add</Button>
             <Button onClick={this.closeAddRoleModal}>Close</Button>
+          </Modal.Footer>
+        </Modal>
+
+        <Modal show={this.state.showEventModal} onHide={this.closeEventModal}>
+          <Modal.Header closeButton>
+            <Modal.Title>Add New Event</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+              <form>
+                  <FormGroup
+                    controlId="formBasicText"
+                  >
+                  <ControlLabel>Event Title</ControlLabel>
+                    <FormControl
+                      type="text"
+                      value={this.state.value}
+                      placeholder=""
+                    />
+                  <ControlLabel>Time</ControlLabel>
+                    <FormControl
+                      type="text"
+                      value={this.state.value}
+                      placeholder="8:30PM"
+                      onChange={this.updateKeySkills}
+                    />
+                  <ControlLabel>Date</ControlLabel>
+                    <FormControl
+                      type="text"
+                      value={this.state.value}
+                      placeholder="Sun. Oct. 21, 2018"
+                      onChange={this.updateKeySkills}
+                  />
+                  <ControlLabel>Where</ControlLabel>
+                      <FormControl
+                        type="text"
+                        value={this.state.value}
+                        placeholder="University of Washington, info.science building"
+                        onChange={this.updateKeySkills}
+                    />
+                  <ControlLabel>Registration Details</ControlLabel>
+                    <FormControl
+                      type="text"
+                      value={this.state.value}
+                      placeholder="http://dubhacks.co/"
+                      onChange={this.updateKeySkills}
+                  />
+                  <FormControl.Feedback />
+                  </FormGroup>
+              </form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button bsStyle="success" onClick={this.closeEventModal}>Add</Button>
+            <Button onClick={this.closeEventModal}>Close</Button>
           </Modal.Footer>
         </Modal>
       </div>
