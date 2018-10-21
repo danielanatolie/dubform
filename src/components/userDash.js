@@ -59,16 +59,16 @@ class UserDash extends Component {
 
       <Navbar.Collapse>
         <Nav pullRight>
-            <NavItem  onClick={this.handleLogout}>Logout</NavItem>
+            <NavItem  href="/recruit-dash">Logout</NavItem>
         </Nav>
         <Nav pullRight>
-            <NavItem onClick={this.handleLogout}>John Doe</NavItem>
+            <NavItem><Link to={routes.FORM}>John Doe</Link></NavItem>
         </Nav>
 
       </Navbar.Collapse>
 
       </Navbar>
-        <div className="dashHeader">My Companies:</div>
+        <div className="dashHeader">My Companies</div>
         <div className="dashContainer">
           <div className="company">
             Facebook{" "}

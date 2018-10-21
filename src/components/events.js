@@ -23,7 +23,7 @@ class myEvents extends Component {
 
       <Navbar.Collapse>
         <Nav pullRight>
-            <NavItem  onClick={this.handleLogout}>Logout</NavItem>
+            <NavItem  href="/recruit-dash">Logout</NavItem>
         </Nav>
         <Nav pullRight>
             <NavItem onClick={this.handleLogout}>John Doe</NavItem>
