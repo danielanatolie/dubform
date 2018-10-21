@@ -6,6 +6,7 @@ import "./companyEvent.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { Modal, Button, Image } from "react-bootstrap";
+import Calendar from 'rc-calendar';
 
 var hello = 1;
 
@@ -14,24 +15,26 @@ class UserDash extends Component {
         super(props);
         this.state = {
             completeBars: hello,
-            show: false
+            show: false,
+            showTwo: false
         };
         this.handleHide = this.handleHide.bind(this);
+        this.handleHideTwo = this.handleHideTwo.bind(this);
     }
 
     updateBars() {
         hello++;
     }
 
-  handleHide() {
+    handleHide() {
     this.setState({ show: false });
-  }
+    }
 
-  showDropdown() {
-    this.setState({ completeBars: 2 });
-    console.log(this.state.completeBars);
-    console.log("hi");
-  }
+    handleHideTwo() {
+    this.setState({ showTwo: false });
+    this.setState({completeBars: 100});
+    }
+
   render() {
     const companyEvent =
       "Recruiting Event: \n 8:30PM Date: Sun. Oct. 21, 2018. Where: University of Washington, info.science building Registration Details: {URL_LINK} Interested? [YES][NO]";
@@ -85,14 +88,36 @@ class UserDash extends Component {
                 </div>
             ) : this.state.completeBars === 2 ? (
                 <div className="progress">
+                    <div className="progCompleteSmall progSection">
+                    </div>
                     <div className="progComplete progSection">
                     </div>
                     <div className="progComplete progSection">
-                        <div className="progButton">
-                            <Link to={routes.PHONE} onClick={() => this.updateBars()}>
-                                Schedule Phone Interview
-                            </Link>
+                        <div className="progButton progButtonCenter" onClick={() => this.setState({ showTwo: true })}>
+                            Schedule Phone Interview
                         </div>
+                        <Modal
+                            show={this.state.showTwo}
+                            onHide={this.handleHide}
+                            container={this}
+                            aria-labelledby="contained-modal-title"
+                        >
+                            <Modal.Header closeButton>
+                                <Modal.Title id="contained-modal-title">
+                                Choose your available times:
+                                </Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                                <Calendar />
+                            </Modal.Body>
+                            <Modal.Footer>
+                                <Button onClick={this.handleHideTwo}>Close</Button>
+                            </Modal.Footer>
+                        </Modal>
+                    </div>
+                    <div className="progSection">
+                    </div>
+                    <div className="progSection">
                     </div>
                     <div className="progSection">
                     </div>
@@ -102,11 +127,11 @@ class UserDash extends Component {
                     <div className="progComplete progSection">
                     </div>
                     <div className="progComplete progSection">
-                    </div>
-                    <div className="progComplete progSection">
                         <div className="progButton">
-                            Pending Offer
+                            Do Phone Interview
                         </div>
+                    </div>
+                    <div className="progSection">
                     </div>
                 </div>
                 )}
