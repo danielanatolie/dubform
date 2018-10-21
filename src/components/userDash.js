@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import * as routes from "../constants/routes";
 import "./userDash.css";
+import "./companyEvent.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, Image } from "react-bootstrap";
 class UserDash extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +27,7 @@ class UserDash extends Component {
   }
   render() {
     const companyEvent =
-      "Recruiting Event: 8:30PM Date: Sun. Oct. 21, 2018 Where: University of Washington, info.science building Registration Details: {URL_LINK} Interested? [YES][NO]";
+      "Recruiting Event: \n 8:30PM Date: Sun. Oct. 21, 2018. Where: University of Washington, info.science building Registration Details: {URL_LINK} Interested? [YES][NO]";
     return (
       <div>
         <Link to={routes.FORM}>
@@ -50,10 +51,13 @@ class UserDash extends Component {
             >
               <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title">
-                  Upcoming Company Events
+                  Upcoming Company Events LALALLALALAL
                 </Modal.Title>
               </Modal.Header>
-              <Modal.Body>{companyEvent}</Modal.Body>
+              <Modal.Body>
+                <div className="display-linebreak">{companyEvent}</div>{" "}
+                <Image src="./companyEvent.png" rounded />
+              </Modal.Body>
               <Modal.Footer>
                 <Button onClick={this.handleHide}>Close</Button>
               </Modal.Footer>
@@ -102,6 +106,7 @@ class UserDash extends Component {
                   Upcoming Company Events
                 </Modal.Title>
               </Modal.Header>
+              <Image src="http://15f.dubhacks.co/images/fb_link.png" rounded />
               <Modal.Body>{companyEvent}</Modal.Body>
               <Modal.Footer>
                 <Button onClick={this.handleHide}>Close</Button>
