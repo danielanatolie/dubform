@@ -180,7 +180,7 @@ class RecruiterDash extends Component {
               <td>John</td>
               <td>70</td>
               <td>
-                <Button bsStyle="success">Schedulde Interview</Button>
+                <Button bsStyle="success">Schedule Interview</Button>
               </td>
               <td>Was refered by Mark Z. (#58f8asd348)</td>
             </tr>
@@ -188,7 +188,7 @@ class RecruiterDash extends Component {
               <td>Sara</td>
               <td>70</td>
               <td>
-                <Button bsStyle="success">Schedulde Interview</Button>
+                <Button bsStyle="success">Schedule Interview</Button>
               </td>
             </tr>
             <td></td>
