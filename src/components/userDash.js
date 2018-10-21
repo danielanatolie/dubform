@@ -7,7 +7,7 @@ class UserDash extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            completeBars: 2
+            completeBars: 1
         };
     }
 
