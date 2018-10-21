@@ -1,33 +1,50 @@
 import React, { Component } from "react";
+import {Link, withRouter} from "react-router-dom";
 import { Button, Form, FormGrid,ControlLabel, HelpBlock, FormGroup, FormControl, Row, Col, Container, Pager } from "react-bootstrap";
+import * as routes from "../constants/routes";
+import "./form.css";
 
 class myForm extends Component {
+
+  grow(event) {
+    console.log(event.target);
+    var content = event.target;
+    var growDiv = content.nextSibling.nextSibling;
+    if (growDiv.classList.contains("hidden")) {
+      growDiv.classList.remove("hidden");
+    } else {
+      growDiv.classList.add("hidden");
+    }
+}
+
   render() {
     return (
-
       <div>
       <Row className="show-grid">
         <Col xs={6} md={4}>
         </Col>
 
         <Col xs={6} md={4}>
-        <form>
-          <h1>Basic Info</h1>
-          <ControlLabel>Resume/CV</ControlLabel><br/>
-          <Button bsStyle="warning">Upload</Button>
-          <FormGroup controlId="formBasicText">
-            <ControlLabel>First Name</ControlLabel>
-              <FormControl
-                type="text"
-                placeholder="Enter your full name"
-              />
-          </FormGroup>
+
+          <h1 onClick={(e) => this.grow(e)}>Basic Info</h1>
+          <hr/>
+          <div className="basicInfo">
+            <ControlLabel>Resume/CV</ControlLabel><br/>
+            <Button bsStyle="warning">Upload</Button>
+            <hr/>
+            <FormGroup controlId="formBasicText">
+              <ControlLabel>First Name</ControlLabel>
+                <FormControl
+                  type="text"
+                  placeholder="John Doe"
+                  />
+            </FormGroup>
 
           <FormGroup controlId="formBasicText">
             <ControlLabel>Phone Number</ControlLabel>
               <FormControl
                 type="text"
-                placeholder="Enter your phone number"
+                placeholder="541-1234-56789"
               />
           </FormGroup>
 
@@ -35,16 +52,20 @@ class myForm extends Component {
             <ControlLabel>Email Address</ControlLabel>
               <FormControl
                 type="text"
-                placeholder="Enter email address"
+                placeholder="john.doe@uw.edu"
               />
           </FormGroup>
+          </div>
 
+          <h1 onClick={(e) => this.grow(e)}>Work Experience</h1>
+          <hr/>
+          <div className="workExperience hidden">
 
-          <h1>Work Experience</h1>
           <FormGroup controlId="formBasicText">
             <ControlLabel>Job Title</ControlLabel>
               <FormControl
                 type="text"
+                placeholder="Software Engineer"
               />
           </FormGroup>
 
@@ -52,36 +73,39 @@ class myForm extends Component {
             <ControlLabel>Company</ControlLabel>
               <FormControl
                 type="text"
+                placeholder="Facebook"
               />
           </FormGroup>
-
           <FormGroup controlId="formBasicText">
             <ControlLabel>Location</ControlLabel>
               <FormControl
                 type="text"
+                placeholder="Seattle"
               />
+
           </FormGroup>
           <Row className="show-grid">
             <Col md={6} mdPush={6}>
-            <FormGroup controlId="formBasicText">
-              <ControlLabel>To</ControlLabel>
-                <FormControl
-                  style={{width: '180px'}}
-                  type="text"
-                />
-            </FormGroup>
-            </Col>
-            <Col md={6} mdPull={6}>
             <FormGroup controlId="formBasicText">
               <ControlLabel>From</ControlLabel>
                 <FormControl
                   style={{width: '180px'}}
                   type="text"
+                  placeholder="08/27/2018"
+                />
+            </FormGroup>
+            </Col>
+            <Col md={6} mdPull={6}>
+            <FormGroup controlId="formBasicText">
+              <ControlLabel>To</ControlLabel>
+                <FormControl
+                  style={{width: '180px'}}
+                  type="text"
+                  placeholder="05/03/2018"
                 />
             </FormGroup>
             </Col>
           </Row>
-
 
           <FormGroup>
             <ControlLabel>Description</ControlLabel>
@@ -90,10 +114,14 @@ class myForm extends Component {
                      componentClass="textarea"
                    />
           </FormGroup>
-        </form>
+          </div>
 
 
-        <h1>Education</h1>
+
+
+        <h1 onClick={(e) => this.grow(e)}>Education</h1>
+        <hr/>
+        <div className="Education hidden">
         <FormGroup controlId="formBasicText">
           <ControlLabel>School</ControlLabel>
             <FormControl
@@ -141,8 +169,6 @@ class myForm extends Component {
           </FormGroup>
           </Col>
         </Row>
-
-        <h1>Skills</h1>
         <FormGroup>
           <ControlLabel>Skills</ControlLabel>
                <FormControl
@@ -150,8 +176,11 @@ class myForm extends Component {
                    componentClass="textarea"
                  />
         </FormGroup>
+        </div>
 
-        <h1>Websites</h1>
+        <h1 onClick={(e) => this.grow(e)}>Websites</h1>
+        <hr/>
+        <div className="website hidden">
         <FormGroup controlId="formBasicText">
           <ControlLabel>Portfolio</ControlLabel>
             <FormControl
@@ -172,14 +201,14 @@ class myForm extends Component {
               type="text"
             />
         </FormGroup>
-
+        </div>
         </Col>
         <Col xs={6} md={4}>
         </Col>
       </Row>
 
       <Pager>
-        <Pager.Item href="/user-dash">Next</Pager.Item>
+        <Pager.Item><Link to={routes.USER_DASH}> Next</Link></Pager.Item>
       </Pager>;
       </div>
     );
