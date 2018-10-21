@@ -11,11 +11,11 @@ import * as routes from "../constants/routes";
 const App = () => (
   <Router>
     <div>
-      <Route exact path={routes.FORM} component={() => <Form />} />
-      <Route exact path={routes.CODING} component={() => <Coding />} />
-      <Route exact path={routes.PHONE} component={() => <Phone />} />
-      <Route exact path={routes.USER_DASH} component={() => <UserDash />} />
-      <Route exact path={routes.RECRUIT_DASH} render={() => <RecruitDash />} />
+        <Route exact path={routes.FORM} component={() => <Form />} />
+        <Route exact path={routes.CODING} component={() => <Coding />} />
+        <Route exact path={routes.PHONE} component={() => <Phone />} />
+        <Route exact path={routes.USER_DASH} component={() => <UserDash />} />
+        <Route exact path={routes.RECRUIT_DASH} render={() => <RecruitDash />} />
     </div>
   </Router>
 );
