@@ -1,6 +1,11 @@
 # dubForm
 
+A universal platform to empower applicants and recruiters.
+
 What if there was a tool that could streamline the entire recruitment process for both students and recruiters? Enter dubForm, the universal pipeline tool for finding the perfect job match for both traditional and non-traditional students.
+
+- Demo Video: https://youtu.be/ef5ycJZPjZg
+- dubHacks Submission: https://devpost.com/software/dubform/
 
 ## Inspiration: The Problem and Why This Matters?
 
