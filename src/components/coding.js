@@ -47,9 +47,9 @@ class Coding extends React.Component {
                   placeholder={placeholderText}
                 />
               </FormGroup>
-              <Button bsStyle="success">
-                <Link to={routes.USER_DASH}>Submit</Link>
-              </Button>
+              <Link to={routes.USER_DASH}>
+                <Button bsStyle="success">Submit</Button>
+              </Link>
             </form>
           </Col>
         </Row>
