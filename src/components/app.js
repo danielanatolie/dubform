@@ -6,6 +6,7 @@ import Form from './form';
 import Events from './events';
 import RecruitDash from './recruiterDash';
 import UserDash from './userDash';
+import Phone from './phone';
 import * as routes from "../constants/routes";
 
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
         <Route exact path={routes.EVENTS} component={() => <Events />} />
         <Route exact path={routes.USER_DASH} component={() => <UserDash />} />
         <Route exact path={routes.RECRUIT_DASH} render={() => <RecruitDash />} />
+        <Route exact path={routes.PHONE} render={() => <Phone />} />
     </div>
   </Router>
 );
