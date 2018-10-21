@@ -4,6 +4,7 @@
     flex-direction: column;
     height: 80%;
     margin: auto;
+    overflow: auto;
     width: 90%;
     border-bottom-right-radius: 2em;
     border-bottom-left-radius: 2em;
@@ -94,4 +95,12 @@
 .progButton > a, .progButton > a:hover {
     color: white;
     text-decoration: none;
+}
+
+.progCancelled {
+    background-color: red;
+}
+
+.progDull {
+    background-color: darkGray;
 }

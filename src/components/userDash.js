@@ -3,19 +3,21 @@ import { Link, withRouter } from "react-router-dom";
 import * as routes from "../constants/routes";
 import './userDash.css';
 
+var hello = 1;
+
 class UserDash extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
-            completeBars: 1
+            completeBars: hello
         };
     }
 
-    showDropdown() {
-        this.setState({completeBars: 2});
-        console.log(this.state.completeBars);
-        console.log("hi");
+    updateBars() {
+        hello++;
     }
+
     render() {
         return (
             <div>
@@ -37,12 +39,26 @@ class UserDash extends Component {
                             <div className="progress">
                                 <div className="progComplete progSection">
                                     <div className="progButton">
-                                        <Link to={routes.CODING} onClick={() => this.showDropdown()}>
+                                        <Link to={routes.CODING} onClick={() => this.updateBars()}>
                                             Start Coding Challenge
                                         </Link>
                                     </div>
                                 </div>
+                                <div id="test" className="progSection">
+                                </div>
                                 <div className="progSection">
+                                </div>
+                            </div>
+                        ) : this.state.completeBars === 2 ? (
+                            <div className="progress">
+                                <div className="progComplete progSection">
+                                </div>
+                                <div className="progComplete progSection">
+                                    <div className="progButton">
+                                        <Link to={routes.PHONE} onClick={() => this.updateBars()}>
+                                            Schedule Phone Interview
+                                        </Link>
+                                    </div>
                                 </div>
                                 <div className="progSection">
                                 </div>
@@ -52,17 +68,16 @@ class UserDash extends Component {
                                 <div className="progComplete progSection">
                                 </div>
                                 <div className="progComplete progSection">
-                                    <div className="progButton">
-                                        Schedule Phone Interview
-                                    </div>
                                 </div>
-                                <div className="progSection">
+                                <div className="progComplete progSection">
+                                    <div className="progButton">
+                                        Pending Offer
+                                    </div>
                                 </div>
                             </div>
                         )}
                     </div>
-                    <div className="spacer">
-                    </div>
+                    <div className="spacer"></div>
                     <div className="company">
                         Google
                         <div className="progress">
@@ -74,6 +89,21 @@ class UserDash extends Component {
                                 </div>
                             </div>
                             <div className="progSection">
+                            </div>
+                        </div>
+                    </div>
+                    <div className="spacer"></div>
+                    <div className="company">
+                        Amazon
+                        <div className="progress">
+                            <div className="progCancelled progSection">
+                            </div>
+                            <div className="progCancelled progSection">
+                                <div className="progDull progButton">
+                                    Declined Offer :(
+                                </div>
+                            </div>
+                            <div className="progCancelled progSection">
                             </div>
                         </div>
                     </div>
