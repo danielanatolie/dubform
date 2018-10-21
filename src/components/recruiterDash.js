@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Label } from 'react-bootstrap';
+import { Table, Label, Button } from 'react-bootstrap';
 
 class RecruiterDash extends Component {
   render() {
@@ -19,17 +19,21 @@ class RecruiterDash extends Component {
             <tr>
               <td>John</td>
               <td>70</td>
-              <td>PHONE</td>
+              <td>
+                <Button bsStyle="success">Schedulde Interview</Button>
+              </td>
             </tr>
             <tr>
               <td>Sara</td>
               <td>70</td>
-              <td>PHONE</td>
+              <td>
+                <Button bsStyle="success">Schedulde Interview</Button>
+              </td>
             </tr>
             <tr>
               <td>Max</td>
               <td>40</td>
-              <td>Challenge</td>
+              <td>Solving Coding Challenge</td>
             </tr>
           </tbody>
           </Table>
@@ -46,12 +50,12 @@ class RecruiterDash extends Component {
             <tr>
               <td>Smith</td>
               <td>101</td>
-              <td>YES | NO</td>
+              <td>Hired</td>
             </tr>
           </tbody>
         </Table>
+        <Button bsStyle="warning">Add Role</Button>
       </div>
-
     );
   }
 }
