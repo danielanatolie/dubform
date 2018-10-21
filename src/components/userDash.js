@@ -41,7 +41,7 @@ class UserDash extends Component {
           <div className="home-link">Dubform</div>
         </Link>
         <div className="user-name">John Doe</div>
-        <div className="dashHeader">Your Companies:</div>
+        <div className="dashHeader">My Companies:</div>
         <div className="dashContainer">
           <div className="company">
             Facebook{" "}
@@ -174,7 +174,7 @@ class UserDash extends Component {
                 <div className="progDull progButton">Failed Coding Challenge :(</div>
               </div>
               <div className="progSection">
-                
+
               </div>
               <div className="progSection" />
             </div>
