@@ -6,7 +6,8 @@
     background-color: rgb(220, 53, 69);
     width: 6em;
     color: white;
-    border-radius: 1em;
+    border-radius: 0.8em;
+    margin-bottom: 1em;
     text-decoration: none;
 }
 
