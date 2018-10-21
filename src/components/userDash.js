@@ -149,13 +149,13 @@ class UserDash extends Component {
                     <div className="progComplete progSection">
                     </div>
                     <div className="progComplete progSection">
-                        
+
                         <div className="progButton">
                             <Link to={routes.PHONE} onClick={() => this.finalUpdate()}>
                             Do Phone Interview
                             </Link>
                         </div>
-                       
+
                     </div>
                     <div className="progSection">
                     </div>
@@ -205,6 +205,7 @@ class UserDash extends Component {
                 <Button onClick={this.handleHide}>Close</Button>
               </Modal.Footer>
             </Modal>
+
             <div className="progress">
               <div className="progComplete progSection" />
               <div className="progComplete progSection">
@@ -213,6 +214,7 @@ class UserDash extends Component {
               <div className="progSection" />
             </div>
           </div>
+
           <div className="spacer" />
           <div className="company">
             Amazon{" "}
@@ -247,6 +249,116 @@ class UserDash extends Component {
               <div className="progSection" />
             </div>
           </div>
+
+          <div className="spacer" />
+          <div className="company">
+            Zillow{" "}
+            <FontAwesomeIcon
+              icon={faInfoCircle}
+              size="xs"
+              onClick={() => this.setState({ show: true })}
+            />
+            <Modal
+              show={this.state.show}
+              onHide={this.handleHide}
+              container={this}
+              aria-labelledby="contained-modal-title"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title">
+                  Upcoming Company Events
+                </Modal.Title>
+              </Modal.Header>
+              <Image src="http://15f.dubhacks.co/images/fb_link.png" rounded />
+              <Modal.Body>{companyEvent}</Modal.Body>
+              <Modal.Footer>
+                <Button onClick={this.handleHide}>Close</Button>
+              </Modal.Footer>
+            </Modal>
+            <div className="progress">
+              <div className="progCancelled progSection">
+                <div className="progDull progButton">Failed Coding Challenge :(</div>
+              </div>
+              <div className="progSection">
+
+              </div>
+              <div className="progSection" />
+            </div>
+          </div>
+
+          <div className="spacer" />
+          <div className="company">
+            Best Buy{" "}
+            <FontAwesomeIcon
+              icon={faInfoCircle}
+              size="xs"
+              onClick={() => this.setState({ show: true })}
+            />
+            <Modal
+              show={this.state.show}
+              onHide={this.handleHide}
+              container={this}
+              aria-labelledby="contained-modal-title"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title">
+                  Upcoming Company Events
+                </Modal.Title>
+              </Modal.Header>
+              <Image src="http://15f.dubhacks.co/images/fb_link.png" rounded />
+              <Modal.Body>{companyEvent}</Modal.Body>
+              <Modal.Footer>
+                <Button onClick={this.handleHide}>Close</Button>
+              </Modal.Footer>
+            </Modal>
+            <div className="progress">
+              <div className="progCancelled progSection">
+                <div className="progDull progButton">Failed Coding Challenge :(</div>
+              </div>
+              <div className="progSection">
+
+              </div>
+              <div className="progSection" />
+            </div>
+          </div>
+
+          <div className="spacer" />
+          <div className="company">
+            Starbucks{" "}
+            <FontAwesomeIcon
+              icon={faInfoCircle}
+              size="xs"
+              onClick={() => this.setState({ show: true })}
+            />
+            <Modal
+              show={this.state.show}
+              onHide={this.handleHide}
+              container={this}
+              aria-labelledby="contained-modal-title"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title">
+                  Upcoming Company Events
+                </Modal.Title>
+              </Modal.Header>
+              <Image src="http://15f.dubhacks.co/images/fb_link.png" rounded />
+              <Modal.Body>{companyEvent}</Modal.Body>
+              <Modal.Footer>
+                <Button onClick={this.handleHide}>Close</Button>
+              </Modal.Footer>
+            </Modal>
+            <div className="progress">
+              <div className="progCancelled progSection">
+                <div className="progDull progButton">Failed Coding Challenge :(</div>
+              </div>
+              <div className="progSection">
+
+              </div>
+              <div className="progSection" />
+            </div>
+          </div>
+
+
         </div>
       </div>
     );
