@@ -5,7 +5,7 @@ import "./userDash.css";
 import "./companyEvent.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-import { Modal, Button, Image } from "react-bootstrap";
+import { Modal, Button, Image, Navbar, Nav,NavItem, MenuItem, NavDropdown } from "react-bootstrap";
 import Calendar from 'rc-calendar';
 
 var hello = 1;
@@ -41,11 +41,29 @@ class UserDash extends Component {
       "Recruiting Event: \n 8:30PM Date: Sun. Oct. 21, 2018. Where: University of Washington, info.science building Registration Details: {URL_LINK} Interested? [YES][NO]";
     return (
       <div>
-        <Link to={routes.FORM}>
-          <div className="home-link">Dubform</div>
-        </Link>
-        <div className="user-name">John Doe</div>
-        <div className="dashHeader">Your Companies:</div>
+      <Navbar>
+      <Navbar.Header>
+        <Navbar.Brand className="dubForm">
+          <a href="/">dubForm</a>
+        </Navbar.Brand>
+        <Navbar.Brand>
+          <a href="/events">Events</a>
+        </Navbar.Brand>
+        <Navbar.Toggle />
+      </Navbar.Header>
+
+      <Navbar.Collapse>
+        <Nav pullRight>
+            <NavItem  onClick={this.handleLogout}>Logout</NavItem>
+        </Nav>
+        <Nav pullRight>
+            <NavItem onClick={this.handleLogout}>John Doe</NavItem>
+        </Nav>
+
+      </Navbar.Collapse>
+
+      </Navbar>
+        <div className="dashHeader">My Companies:</div>
         <div className="dashContainer">
           <div className="company">
             Facebook{" "}
@@ -198,7 +216,7 @@ class UserDash extends Component {
                 <div className="progDull progButton">Failed Coding Challenge :(</div>
               </div>
               <div className="progSection">
-                
+
               </div>
               <div className="progSection" />
             </div>
