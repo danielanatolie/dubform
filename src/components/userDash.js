@@ -162,14 +162,20 @@ class UserDash extends Component {
                 </div>
             ) : (
                 <div className="progress">
+                    <div className="progCompleteSmall progSection">
+                    </div>
                     <div className="progComplete progSection">
+                    </div>
+                    <div className="progCompleteSmall progSection">
                     </div>
                     <div className="progComplete progSection">
                     </div>
                     <div className="progSection progComplete">
-                        <div className="progButton">
+                        <div className="progButton progButtonCenter">
                             Pending Offer
                         </div>
+                    </div>
+                    <div className="progSection">
                     </div>
                 </div>
             )}

@@ -5,11 +5,11 @@ import "./phone.css";
 
 const Phone = () => {
   return (
-      <div>
+      <div id="wazzupBrah">
         <iframe
             width="600"
-            height="600"
-            src="https://www.youtube.com/embed/Y4G55jk5Ymg?rel=0&cc_load_policy=1"
+            height="800"
+            src="https://www.youtube.com/embed/5w3cYtJekpw?cc_load_policy=1&autoplay=1"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen>
