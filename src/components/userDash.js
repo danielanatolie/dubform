@@ -185,8 +185,6 @@ class UserDash extends Component {
                     <div className="progSection">
                     </div>
                 </div>
-                <div className="progSection" />
-              </div>
             )}
           </div>
           <div className="spacer" />
@@ -254,7 +252,6 @@ class UserDash extends Component {
               </div>
               <div className="progSection">
               </div>
-              <div className="progSection" />
               <div className="progSection" />
             </div>
           </div>
