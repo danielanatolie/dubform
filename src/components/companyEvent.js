@@ -1,35 +1,27 @@
 import React, { Component } from "react";
+import "./userDash.css";
+import { Modal, Button } from "react-bootstrap";
 const CompanyEvent = () => {
-  return <div>Hello This is the CompanyEvent</div>;
+  const facebookEvent =
+    "Facebook Recruiting: 8:30PM Date: Sun. Oct. 21, 2018 Where: University of Washington, info.science building Registration Details: {URL_LINK} Interested? [YES][NO]";
+
+  return (
+    <Modal
+      show={this.state.show}
+      onHide={this.handleHide}
+      container={this}
+      aria-labelledby="contained-modal-title"
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title">
+          Upcoming Facebook Events
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>{facebookEvent}</Modal.Body>
+      <Modal.Footer>
+        <Button onClick={this.handleHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
 };
 export default CompanyEvent;
-
-{
-  /* <div className="modal-container" style={{ height: 200 }}>
-  <Button
-    bsStyle="primary"
-    bsSize="large"
-    onClick={() => this.setState({ show: true })}
-  >
-    Launch contained modal
-  </Button>
-
-  <Modal
-    show={this.state.show}
-    onHide={this.handleHide}
-    container={this}
-    aria-labelledby="contained-modal-title"
-  >
-    <Modal.Header closeButton>
-      <Modal.Title id="contained-modal-title">Contained Modal</Modal.Title>
-    </Modal.Header>
-    <Modal.Body>
-      Elit est explicabo ipsum eaque dolorem blanditiis doloribus sed id ipsam,
-      beatae, rem fuga id earum? Inventore et facilis obcaecati.
-    </Modal.Body>
-    <Modal.Footer>
-      <Button onClick={this.handleHide}>Close</Button>
-    </Modal.Footer>
-  </Modal>
-</div>; */
-}

@@ -25,10 +25,8 @@ class UserDash extends Component {
     console.log("hi");
   }
   render() {
-    const facebookEvent =
-      "Facebook Recruiting: 8:30PM Date: Sun. Oct. 21, 2018 Where: University of Washington, info.science building Registration Details: {URL_LINK} Interested? [YES][NO]";
-    const googleEvent =
-      "googleEvent Recruiting: 8:30PM Date: Sun. Oct. 21, 2018 Where: University of Washington, info.science building Registration Details: {URL_LINK} Interested? [YES][NO]";
+    const companyEvent =
+      "Recruiting Event: 8:30PM Date: Sun. Oct. 21, 2018 Where: University of Washington, info.science building Registration Details: {URL_LINK} Interested? [YES][NO]";
     return (
       <div>
         <Link to={routes.FORM}>
@@ -52,10 +50,10 @@ class UserDash extends Component {
             >
               <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title">
-                  Upcoming Facebook Events
+                  Upcoming Company Events
                 </Modal.Title>
               </Modal.Header>
-              <Modal.Body>{facebookEvent}</Modal.Body>
+              <Modal.Body>{companyEvent}</Modal.Body>
               <Modal.Footer>
                 <Button onClick={this.handleHide}>Close</Button>
               </Modal.Footer>
@@ -87,7 +85,28 @@ class UserDash extends Component {
           </div>
           <div className="spacer" />
           <div className="company">
-            Google <FontAwesomeIcon icon={faInfoCircle} size="xs" />
+            Google{" "}
+            <FontAwesomeIcon
+              icon={faInfoCircle}
+              size="xs"
+              onClick={() => this.setState({ show: true })}
+            />
+            <Modal
+              show={this.state.show}
+              onHide={this.handleHide}
+              container={this}
+              aria-labelledby="contained-modal-title"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title">
+                  Upcoming Company Events
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body>{companyEvent}</Modal.Body>
+              <Modal.Footer>
+                <Button onClick={this.handleHide}>Close</Button>
+              </Modal.Footer>
+            </Modal>
             <div className="progress">
               <div className="progComplete progSection" />
               <div className="progComplete progSection">
