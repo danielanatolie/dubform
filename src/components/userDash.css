@@ -105,3 +105,7 @@
 .modal-container .modal-backdrop {
   position: absolute;
 }
+
+.display-linebreak {
+  white-space: pre-line;
+}
