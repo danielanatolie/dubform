@@ -103,6 +103,7 @@ class RecruiterDash extends Component {
               <th>Candidate</th>
               <th>Score</th>
               <th>Progress</th>
+              <th>Notes</th>
             </tr>
           </thead>
           <tbody>
@@ -112,6 +113,7 @@ class RecruiterDash extends Component {
               <td>
                 <Button bsStyle="success">Schedule Interview</Button>
               </td>
+              <td>Met at Dubhacks, has a pending offer by Oct. 25, 2018</td>
             </tr>
             <tr>
               <td>Sara</td>
@@ -119,11 +121,13 @@ class RecruiterDash extends Component {
               <td>
                 <Button bsStyle="success">Schedule Interview</Button>
               </td>
+              <td>Asked a lot of great questions</td>
             </tr>
             <tr>
               <td>Max</td>
               <td>40</td>
               <td>Solving Coding Challenge</td>
+              <td>Built a great project at dubhacks</td>
             </tr>
           </tbody>
           </Table>
@@ -152,6 +156,7 @@ class RecruiterDash extends Component {
               <th>Candidate</th>
               <th>Score</th>
               <th>Progress</th>
+              <th>Notes</th>
             </tr>
           </thead>
           <tbody>
@@ -161,6 +166,7 @@ class RecruiterDash extends Component {
               <td>
                 <Button bsStyle="success">Schedulde Interview</Button>
               </td>
+              <td>Was refered by Mark Z. (#58f8asd348)</td>
             </tr>
             <tr>
               <td>Sara</td>
@@ -169,10 +175,12 @@ class RecruiterDash extends Component {
                 <Button bsStyle="success">Schedulde Interview</Button>
               </td>
             </tr>
+            <td></td>
             <tr>
               <td>Max</td>
               <td>40</td>
               <td>Solving Coding Challenge</td>
+              <td></td>
             </tr>
           </tbody>
           </Table>
