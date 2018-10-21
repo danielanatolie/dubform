@@ -32,26 +32,6 @@ class myEvents extends Component {
       </Navbar.Collapse>
 
       </Navbar>
-      <Carousel>
-        <Carousel.Item>
-          <img width={1400} height={300}  src="https://www.marsdd.com/wp-content/uploads/2018/06/job-fairs-hackathons-1998x1100.jpg" />
-          <Carousel.Caption>
-            <h1>Hackathons</h1>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img width={1400} height={300} alt="500x500" src="https://www.greedge.com/blog/wp-content/uploads/2017/08/1429319jakarta-career-day.jpg" />
-          <Carousel.Caption>
-            <h1>Tech Events</h1>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img width={1400} height={300} alt="500x500" src="https://images.ctfassets.net/7ca9kifzimh6/4E4BoAIvHq2KIIuMQakEq2/089f44baebb3e06399894bcbc458efcd/technology.jpg?q=50&fl=progressive" />
-          <Carousel.Caption>
-            <h1>Internships</h1>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
       <Grid>
           <Row className="show-grid">
             <Col md={4}>
