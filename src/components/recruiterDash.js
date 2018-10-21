@@ -73,7 +73,7 @@ class RecruiterDash extends Component {
         <Navbar>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#brand">dubForm</a>
+            <a href="/">dubForm</a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
@@ -94,8 +94,9 @@ class RecruiterDash extends Component {
         </Navbar.Collapse>
         </Navbar>
 
+
           <h1><Label>Facebook Interns</Label></h1>
-          <h3><Label>Frontend Developer</Label></h3>
+          <h3>Frontend Developer</h3>
           <Table striped bordered condensed hover>
           <thead>
             <tr>
@@ -126,7 +127,7 @@ class RecruiterDash extends Component {
             </tr>
           </tbody>
           </Table>
-          <h3><Label>UX</Label></h3>
+          <h3>UX</h3>
           <Table striped bordered condensed hover>
           <thead>
             <tr>
