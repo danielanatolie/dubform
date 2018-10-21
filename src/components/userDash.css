@@ -1,5 +1,5 @@
 .dashContainer {
-  background-color: #ddd;
+  background-color: #fffdff;
   display: flex;
   flex-direction: column;
   height: 80%;
@@ -9,16 +9,18 @@
   border-bottom-left-radius: 2em;
   padding-top: 2em;
   padding-bottom: 2em;
+  border-style: solid;
 }
 
 .dashHeader {
-  background-color: #777;
+  background-color: #f1f1f1;
   margin: auto;
+  border-style: solid;
   border-top-right-radius: 1em;
   border-top-left-radius: 1em;
-  margin-top: 2.6em;
+  margin-top: 1em;
   padding: 0.6em;
-  color: white;
+  color: black;
   font-size: 2em;
   font-weight: 700;
   width: 90%;
@@ -31,6 +33,7 @@
   width: 80%;
   border-radius: 0.5em;
   font-size: 1.4em;
+  border-style: solid;
 }
 
 .home-link {
@@ -120,4 +123,8 @@
 
 .display-linebreak {
   white-space: pre-line;
+}
+
+.dubForm{
+  color: black;
 }

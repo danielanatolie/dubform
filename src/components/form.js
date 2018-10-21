@@ -6,16 +6,6 @@ import "./form.css";
 
 class myForm extends Component {
 
-  grow(event) {
-    console.log(event.target);
-    var content = event.target;
-    var growDiv = content.nextSibling.nextSibling;
-    if (growDiv.classList.contains("hidden")) {
-      growDiv.classList.remove("hidden");
-    } else {
-      growDiv.classList.add("hidden");
-    }
-}
 
   render() {
     return (

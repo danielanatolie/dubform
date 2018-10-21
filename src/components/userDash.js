@@ -43,26 +43,25 @@ class UserDash extends Component {
       <div>
       <Navbar>
       <Navbar.Header>
+        <Navbar.Brand className="dubForm">
+          <a href="/">dubForm</a>
+        </Navbar.Brand>
         <Navbar.Brand>
-          <a href="#brand">dubForm</a>
+          <a href="/events">Events</a>
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
+
       <Navbar.Collapse>
-        <Nav onSelect={k => this.handleNavSelect(k)}>
-          <NavItem eventKey={1} href="#">
-            Events
-          </NavItem>
+        <Nav pullRight>
+            <NavItem  onClick={this.handleLogout}>Logout</NavItem>
         </Nav>
         <Nav pullRight>
-          <NavItem eventKey={1} href="#">
-            Facebook
-          </NavItem>
-          <NavItem eventKey={2} href="#">
-              <Link to={routes.USER_DASH} style={{ color: '#A9A9A9' }}>Sign out</Link>
-          </NavItem>
+            <NavItem onClick={this.handleLogout}>John Doe</NavItem>
         </Nav>
+
       </Navbar.Collapse>
+
       </Navbar>
         <div className="dashHeader">My Companies:</div>
         <div className="dashContainer">
