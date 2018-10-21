@@ -172,7 +172,7 @@ class UserDash extends Component {
                     </div>
                     <div className="progSection progComplete">
                         <div className="progButton progButtonCenter">
-                            Pending Offer
+                            Pending Decision
                         </div>
                     </div>
                     <div className="progSection">
@@ -245,7 +245,6 @@ class UserDash extends Component {
                 <div className="progDull progButton">Failed Coding Challenge :(</div>
               </div>
               <div className="progSection">
-
               </div>
               <div className="progSection" />
             </div>
