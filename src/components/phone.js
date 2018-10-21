@@ -8,8 +8,8 @@ const Phone = () => {
       <div id="wazzupBrah">
         <iframe
             width="600"
-            height="800"
-            src="https://www.youtube.com/embed/5w3cYtJekpw?cc_load_policy=1&autoplay=1"
+            height="600"
+            src="https://www.youtube.com/embed/5w3cYtJekpw?cc_load_policy=1&autoplay=1&mute=1"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen>
