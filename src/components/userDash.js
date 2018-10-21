@@ -12,6 +12,8 @@ class UserDash extends Component {
     }
 
     showDropdown() {
+        this.setState({completeBars: 2});
+        console.log(this.state.completeBars);
         console.log("hi");
     }
     render() {
@@ -30,22 +32,34 @@ class UserDash extends Component {
                 </div>
                 <div className="dashContainer">
                     <div className="company">
-                        Facebook
-                        <div className="progress">
-                            <div className="progComplete progSection">
+                        Facebook   
+                        {this.state.completeBars === 1 ? (
+                            <div className="progress">
+                                <div className="progComplete progSection">
                                     <div className="progButton">
                                         <Link to={routes.CODING} onClick={() => this.showDropdown()}>
-                                        Start Coding Challenge
+                                            Start Coding Challenge
                                         </Link>
                                     </div>
+                                </div>
+                                <div className="progSection">
+                                </div>
+                                <div className="progSection">
+                                </div>
                             </div>
-                            <div className="progSection">
-        
+                        ) : (
+                            <div className="progress">
+                                <div className="progComplete progSection">
+                                </div>
+                                <div className="progComplete progSection">
+                                    <div className="progButton">
+                                        Schedule Phone Interview
+                                    </div>
+                                </div>
+                                <div className="progSection">
+                                </div>
                             </div>
-                            <div className="progSection">
-        
-                            </div>
-                        </div>
+                        )}
                     </div>
                     <div className="spacer">
                     </div>
@@ -53,7 +67,6 @@ class UserDash extends Component {
                         Google
                         <div className="progress">
                             <div className="progComplete progSection">
-        
                             </div>
                             <div className="progComplete progSection">
                                 <div className="progButton">
