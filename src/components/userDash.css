@@ -98,10 +98,26 @@
   text-decoration: none;
 }
 
+.progButton > a, .progButton > a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.progCancelled {
+    background-color: red;
+}
+
+.progDull {
+    background-color: darkGray;
+}
 .modal-container {
   position: relative;
 }
 .modal-container .modal,
 .modal-container .modal-backdrop {
   position: absolute;
+}
+
+.display-linebreak {
+  white-space: pre-line;
 }
