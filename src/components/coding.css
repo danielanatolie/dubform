@@ -5,3 +5,7 @@
 textarea.form-control {
   height: 600px!;
 }
+
+#technicalGrid {
+  padding: 400px;
+}

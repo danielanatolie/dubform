@@ -5,9 +5,11 @@ import {
   Col,
   Button,
   FormGroup,
-  ControlLabel,
   FormControl
 } from "react-bootstrap";
+import * as routes from "../constants/routes";
+import { Link, withRouter } from "react-router-dom";
+import Countdown from "react-countdown-now";
 
 class Coding extends React.Component {
   render() {
@@ -22,7 +24,7 @@ class Coding extends React.Component {
     const placeholderText =
       "Do not return anything, modify nums in-place instead.";
     return (
-      <Grid>
+      <Grid id="technicalGrid">
         <Row className="show-grid">
           <h1>Technical Challenge</h1>
           <Col xs={6} md={4}>
@@ -35,6 +37,7 @@ class Coding extends React.Component {
             <div className="display-linebreak">{assumptions}</div>
           </Col>
           <Col xs={12} md={8}>
+            <Countdown date={Date.now() + 600000} />
             <form>
               <FormGroup controlId="formControlsTextarea">
                 {/* <ControlLabel>Technical Challenge</ControlLabel> */}
@@ -44,7 +47,9 @@ class Coding extends React.Component {
                   placeholder={placeholderText}
                 />
               </FormGroup>
-              <Button bsStyle="success">Submit</Button>
+              <Button bsStyle="success">
+                <Link to={routes.USER_DASH}>Submit</Link>
+              </Button>
             </form>
           </Col>
         </Row>
