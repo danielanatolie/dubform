@@ -27,12 +27,13 @@ class UserDash extends Component {
     }
 
     handleHide() {
-    this.setState({ show: false });
+        this.setState({ show: false });
     }
 
     handleHideTwo() {
-    this.setState({ showTwo: false });
-    this.setState({completeBars: 100});
+        this.setState({ showTwo: false });
+        var that = this;
+        setTimeout(function(){ that.setState({completeBars: 100}); }, 3000);
     }
 
   render() {
@@ -107,9 +108,7 @@ class UserDash extends Component {
                                 Choose your available times:
                                 </Modal.Title>
                             </Modal.Header>
-                            <Modal.Body>
                                 <Calendar />
-                            </Modal.Body>
                             <Modal.Footer>
                                 <Button onClick={this.handleHideTwo}>Close</Button>
                             </Modal.Footer>
